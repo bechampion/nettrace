@@ -158,8 +158,8 @@ static void analy_entry_handle(analy_entry_t *entry)
 			ifname = ifname ?: "";
 		}
 
-		sprintf(tinfo, "[%-5s][%-12s][ns:%u] ",
-			 ifname,
+		sprintf(tinfo, "[%-20s][%-5s][%-12s][ns:%u] ",
+			 t->name , ifname,
 			 detail->task, detail->netns);
 	} else if (trace_ctx.mode != TRACE_MODE_DROP) {
 		sprintf(tinfo, "[%-20s] ", t->name);
